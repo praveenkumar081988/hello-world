@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="39b336e7-b3e4-46e0-a386-75bddc558ef9" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="hello-worldFlow" doc:id="1f68719b-a48e-44f1-8c07-479e1850828e" >
+		<http:listener doc:name="Listener" doc:id="498cb3e1-afd3-4b05-af88-4f8d3b70c95e" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="ERROR" doc:name="Logger" doc:id="1cef6e85-7015-4c8f-81c6-6e9d5c321349" message="+++ LOgger in process +++"/>
+		<set-payload value='#["Response from hello world"]' doc:name="Set Payload" doc:id="2b19c8bc-533f-40df-bbfc-eebe7cc7d28f" mimeType="application/json"/>
+	</flow>
+</mule>
