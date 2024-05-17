@@ -35,13 +35,12 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
 						<muleVersion>mule-version</muleVersion>
-						<!-- <username>praveenchauhan4u91</username>
-						<password>Pearl@09</password> -->
+						<!-- <username>praveenchauhan4u91</username> <password>Pearl@09</password> -->
 						<connectedAppClientId>7b80b10bf5e84507b1c2ff195879a626</connectedAppClientId>
 						<connectedAppClientSecret>d15fe0697b8645E8854e7e2845FfB870</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
 						<muleVersion>4.4.0</muleVersion>
-						<applicationName>hello-world-prav</applicationName>						
+						<applicationName>hello-world-prav</applicationName>
 						<environment>Sandbox</environment>
 						<region>us-east-1</region>
 						<workers>1</workers>
@@ -98,7 +97,12 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<!-- <distributionManagement> <repository> <id>MuleRepository</id> <name>Corporate 
-		Repository</name> <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/9f53517f-a395-442b-87a8-f12aee94139b/maven</url> 
-		<layout>default</layout> </repository> </distributionManagement> -->
+	<distributionManagement>
+		<repository>
+			<id>maven-releases</id>
+			<name>maven-releases</name>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 </project>
