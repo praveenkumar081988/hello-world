@@ -6,7 +6,7 @@
 
 	<groupId>com.training</groupId>
 	<artifactId>hello-world</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>hello-world</name>
@@ -32,10 +32,10 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
+					<!-- <cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com/</uri>
 						<muleVersion>mule-version</muleVersion>
-						<!-- <username>praveenchauhan4u91</username> <password>Pearl@09</password> -->
+						<username>praveenchauhan4u91</username> <password>Pearl@09</password>
 						<connectedAppClientId>7b80b10bf5e84507b1c2ff195879a626</connectedAppClientId>
 						<connectedAppClientSecret>d15fe0697b8645E8854e7e2845FfB870</connectedAppClientSecret>
 						<connectedAppGrantType>client_credentials</connectedAppGrantType>
@@ -49,7 +49,7 @@
 						<properties>
 							<http.port>8081</http.port>
 						</properties>
-					</cloudHubDeployment>
+					</cloudHubDeployment> -->
 				</configuration>
 			</plugin>
 		</plugins>
